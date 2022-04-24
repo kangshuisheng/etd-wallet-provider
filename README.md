@@ -14,3 +14,4 @@ __This package is a provider for ETD wallet and can only be used in ETD wallet W
   yarn add etd-wallet-provider
 ```
 # etd-wallet-provider
+# etd-wallet-provider
