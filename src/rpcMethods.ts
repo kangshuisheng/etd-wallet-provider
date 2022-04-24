@@ -8,7 +8,27 @@ export enum RpcMethods {
 }
 
 export interface RpcResponse {
-	jsonrpc: string;
-	id: number;
-	result: any;
+  jsonrpc: string;
+  id: number;
+  result: any;
+}
+
+export interface ParamsOfContract {
+  contractAddress: string;
+  contract: string;
+  func: string;
+  params: any[];
+}
+
+export interface ParamsOfSendTransaction {
+  to: string;
+  value: string;
+  gasPrice?: string;
+  maxGas?: string;
+  data?: string;
+}
+
+export interface ContractParamsOfDepoly {
+  abi: string;
+  byteCode: string;
 }
