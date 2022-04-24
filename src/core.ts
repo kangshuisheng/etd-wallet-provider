@@ -1,4 +1,4 @@
-import { RpcMethod } from './rpcMethods';
+import { RpcMethods, RpcResponse } from "./rpcMethods";
 
 export interface ParamsOfContract {
   contractAddress: string;
@@ -16,13 +16,11 @@ export interface ParamsOfSendTransaction {
 }
 
 export interface EtdProvider {
-  send(method: RpcMethod, params: ParamsOfSendTransaction): Promise<any>;
-  call(params: ParamsOfContract): Promise<any>;
-  callContract(params: ParamsOfContract): Promise<any>;
-  depolyContract(params: string): Promise<any>;
+  send(method: RpcMethods, params: ParamsOfSendTransaction): Promise<RpcResponse>;
+  call(params: ParamsOfContract): Promise<RpcResponse>;
+  callContract(params: ParamsOfContract): Promise<RpcResponse>;
+  depolyContract(params: string): Promise<RpcResponse>;
 }
 
-export function getEtdProvider(): EtdProvider {
-  const provider = (<any>window).etdProvider || (<any>globalThis).etdProvider;
-  return provider as EtdProvider;
-}
+export const etdProvider: EtdProvider =
+  (<any>window).etdProvider || (<any>globalThis).etdProvider;

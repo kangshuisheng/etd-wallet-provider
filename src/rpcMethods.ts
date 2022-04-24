@@ -1,4 +1,4 @@
-export enum RpcMethod {
+export enum RpcMethods {
   etd_accounts = 'etd_accounts',
   etd_chainId = 'etd_chainId',
   etd_balance = 'etd_balance',
