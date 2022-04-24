@@ -6,6 +6,8 @@ __This package is a provider for ETD wallet and can only be used in ETD wallet W
 
 [examples](https://wallet-provider-docs-eight.vercel.app/docs/Examples/React)
 
+[etd-wallet](https://www.pgyer.com/APe0)
+
 ``` shell
   npm i etd-wallet-provider
 ```
