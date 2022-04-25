@@ -30,7 +30,7 @@ function _sendToFlutter(
   rpcMethod: string,
   params?: ParamsOfSendTransaction | ParamsOfContract | ContractParamsOfDepoly
 ) {
-  return (<any>globalThis).flutter_inappwebview.callHandler(rpcMethod, params);
+  return (<any>window || <any>globalThis).flutter_inappwebview.callHandler(rpcMethod, params);
 }
 
 export function getEtdProvider(): EtdProvider {
