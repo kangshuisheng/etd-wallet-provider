@@ -1,11 +1,16 @@
 import {
   ContractParamsOfDepoly,
-  CoreMethods,
   EtdProvider,
   ParamsOfContract,
   ParamsOfSendTransaction,
   RpcMethods,
 } from './interfaces';
+
+enum CoreMethods {
+  etd_deployContract = 'etd_deployContract',
+  etd_call = 'etd_call',
+  etd_callContract = 'etd_callContract',
+}
 
 async function _depolyContract(params: ContractParamsOfDepoly) {
   return _sendToFlutter(CoreMethods.etd_deployContract, params);

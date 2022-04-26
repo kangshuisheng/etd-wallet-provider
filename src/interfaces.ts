@@ -8,12 +8,6 @@ export interface EtdProvider {
   depolyContract(params: ContractParamsOfDepoly): Promise<RpcResponse>;
 }
 
-export enum CoreMethods {
-  etd_deployContract = 'etd_deployContract',
-  etd_call = 'etd_call',
-  etd_callContract = 'etd_callContract',
-}
-
 export enum RpcMethods {
   etd_accounts = 'etd_accounts',
   etd_chainId = 'etd_chainId',
